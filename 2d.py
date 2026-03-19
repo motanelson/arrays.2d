@@ -4,7 +4,7 @@ import copy
 def creates(x:int,y:int):
     lx=[]
     ly=[]
-    lx=" "*x+"\n"
+    lx=" "*x
     for yy in range(y):
         ly.append(copy.copy(lx))
     return ly
@@ -16,8 +16,8 @@ def change(ly:list,y:int,s:str):
         lll=s
         if counter==y:
             lis=len(ll)-1
-            if len(ll)>=len(s):
-              lll=s[:lis]+"\n"
+            if len(ll)<=len(s):
+              lll=s[:lis]
             else: 
               lis=len(s)
               lll=s+ll[lis:]
